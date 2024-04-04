@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SpeakingInBitsWeb.Models;
 using System.Diagnostics;
 
@@ -18,6 +19,7 @@ namespace SpeakingInBitsWeb.Controllers
             return View();
         }
 
+        [Authorize(Roles = IdentityHelper.Student)]
         public IActionResult Privacy()
         {
             return View();
