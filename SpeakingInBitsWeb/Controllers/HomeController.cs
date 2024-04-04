@@ -19,7 +19,6 @@ namespace SpeakingInBitsWeb.Controllers
             return View();
         }
 
-        [Authorize(Roles = IdentityHelper.Student)]
         public IActionResult Privacy()
         {
             return View();
